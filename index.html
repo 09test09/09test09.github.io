@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formularze</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Logo</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <h2>Formularz</h2>
+          <p class="lead">Przykładowy formularz</p>
+        </div>
+
+        <div class="row g-5">
+          <div class="col-md-6">
+            <h4 class="mb-3">Dane osobowe</h4>
+            <form>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="imie" class="form-label">Imie</label>
+                  <input type="text" class="form-control" id="imie" name="imie" placeholder="Pierwsze imie" required>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="drugieimie" class="form-label">Drugie imie</label>
+                  <input type="text" class="form-control" id="drugieimie" name="drugieimie" placeholder="Drugie imie">
+                </div>
+
+                <div class="col-12">
+                  <label for="nazwisko" class="form-label">Nazwisko</label>
+                  <input type="text" class="form-control" id="nazwisko" name="nazwisko" placeholder="Nazwisko" required>
+                </div>
+
+                <h4 class="mt-4 mb-1">Płatność</h4>
+
+                <div class="my-2">
+                  <div class="form-check">
+                    <input id="karta" name="platnosc" type="radio" class="form-check-input" checked required>
+                    <label class="form-check-label" for="karta">Kartą</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="przelew" name="platnosc" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="przelew">Przelew</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="paypal" name="platnosc" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="paypal">PayPal</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="test@test.com" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="jezyk" class="form-label">Język</label>
+                  <select class="form-select" id="jezyk" name="jezyk" required>
+                    <option value="">Wybierz...</option>
+                    <option value="polski">Polski</option>
+                    <option value="niemiecki">Niemiecki</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="narodowosc" class="form-label">Narodowość (lub wiele)</label>
+                  <select class="form-select" id="narodowosc" name="narodowosc[]" multiple required>
+                    <option value="polska">Polska</option>
+                    <option value="niemcy">Niemcy</option>
+                    <option value="inna">Inna</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="opis" class="form-label">Opisz się</label>
+                  <textarea class="form-control height" id="opis" name="opis" placeholder="Jestem..." required></textarea>
+                </div>
+              </div>
+
+              <hr class="my-4">
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="regulamin" name="regulamin" required>
+                <label class="form-check-label" for="regulamin">Zgadzam się na <a href="http://google.pl" target="_blank">regulamin</a></label>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="marketing" name="marketing">
+                <label class="form-check-label" for="marketing">Zgadzam się na maile reklamowe (opcjonalne)</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="id" name="id" disabled>
+                <label class="form-check-label" for="id">Nieedytowalny checkbox</label>
+              </div>
+
+              <div class="form-check mt-3">
+                <label class="form-label" for="pozycja" >Nieedytowalne pole tekstowe - ranga</label>
+                <input type="text" class="form-control" id="pozycja" name="pozycja" value="administrator" disabled>
+              </div>
+
+              <hr class="my-4">
+
+              <button class="w-100 btn btn-primary btn-lg mb-3" type="submit">Zapisz</button>
+              <button class="w-100 btn btn-secondary btn-lg" type="reset">Resetuj</button>
+            </form>
+          </div>
+
+          <div class="col-md-6">
+            <h4 class="mb-1">Inne informacje</h4>
+            <button class="btn btn-secondary btn-sm animate__animated animate__bounce animate__backInRight animate__delay-2s">Przycisk z opóźnieniem 2s</button>
+            <form class="mt-2">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="danie" class="form-label">Ulubione danie</label>
+                  <input type="text" class="form-control" id="danie" name="danie" placeholder="Ulubione danie" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="ulubprogram" class="form-label">Ulubiony program telewizyjny</label>
+                  <input type="text" class="form-control" id="ulubprogram" name="ulubprogram" placeholder="Nazwa programu">
+                </div>
+
+                <h4 class="mt-4 mb-1">Ilość dzieci</h4>
+                <div class="my-2">
+                  <div class="form-check">
+                    <input id="dzieci1" name="dzieci" type="radio" class="form-check-input" checked required>
+                    <label class="form-check-label" for="dzieci1">1</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="dzieci2" name="dzieci" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="dzieci2">2</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="dzieci3" name="dzieci" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="dzieci3">3</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="dzieci4" name="dzieci" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="dzieci4">4+</label>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="kolor" class="form-label">Wybierz kolor lub kolory</label>
+                  <select class="form-select" id="kolor" name="kolory[]" multiple="multiple" required>
+                    <option value="Niebieski">Niebieski</option>
+                    <option value="Fioletowy">Fioletowy</option>
+                    <option value="Różowy">Różowy</option>
+                    <option value="Żółty">Żółty</option>
+                    <option value="Brązowy">Brązowy</option>
+                    <option value="Czarny">Czarny</option>
+                    <option value="Biały">Biały</option>
+                    <option value="Zielony">Zielony</option>
+                    <option value="Czerwony">Czerwony</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="wole" class="form-label">Wole</label>
+                  <select class="form-select" id="wole" name="wole" required>
+                    <option value="">Wybierz...</option>
+                    <option value="telefon">Telefon</option>
+                    <option value="laptop">Laptop</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="opis2" class="form-label">Dodatkowe informacje</label>
+                  <textarea class="form-control height" id="opis2" name="opis2" placeholder="Dodatkowo jeszcze..."></textarea>
+                </div>
+              </div>
+
+              <hr class="my-4">
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="regulamin2" name="regulamin2" required>
+                <label class="form-check-label" for="regulamin2">Zgadzam się <a href="http://google.pl" target="_blank">politykę prywatności</a></label>
+              </div>
+
+              <hr class="my-4">
+
+              <button class="w-100 btn btn-primary btn-lg mb-3" type="submit">Zapisz</button>
+              <button class="w-100 btn btn-secondary btn-lg" type="reset">Resetuj</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
